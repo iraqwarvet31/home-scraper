@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const PORT = 3000;
-// const db = require('../database');
+const db = require('./database/index.js');
 
 const app = express();
 const CLIENT_DIR = path.resolve(__dirname, '..', 'client', 'dist');
