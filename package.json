@@ -19,8 +19,11 @@
   "dependencies": {
     "express": "^4.15.0",
     "mysql": "^2.16.0",
+    "os": "^0.1.1",
+    "public": "^0.1.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "sqlite3": "^4.0.6"
+    "sqlite3": "^4.0.6",
+    "webpack-merge": "^5.7.3"
   }
 }

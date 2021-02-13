@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Form from './Form.jsx'
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -12,7 +14,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        HELLO WORLD!!!
+        <h1>Find My Home</h1>
+        <Form />
       </div>
     )
   }
