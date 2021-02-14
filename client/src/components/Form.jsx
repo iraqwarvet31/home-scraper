@@ -23,12 +23,17 @@ class Form extends React.Component {
   render() {
     return (
       <div>
-        <input
-          value={this.state.city}
-          placeholder="Enter city"
-          onChange={this.handleChange}
-        />
-        <button onClick={this.handleSubmit}>Find!</button>
+        <form>
+          <input
+            value={this.state.city}
+            placeholder="Enter city"
+            onChange={this.handleChange}
+          />
+          <input
+            value={this.state.ste}
+          />
+          <button onClick={this.handleSubmit}>Find!</button>
+        </form>
       </div>
     )
   }

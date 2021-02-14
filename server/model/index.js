@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const puppeteer = require('puppeteer');
 
 const listingSchema = new mongoose.Schema({
   name: String,
