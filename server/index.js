@@ -14,16 +14,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(CLIENT_DIR));
 
 app.post("/api/apartments/", (req, res) => {
-  console.log(req.body)
-  // (async function main() {
-  //   try {
-  //     const data = await getData();
-  //     res.send(data).status(200);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // })()
-  res.send(req.body).status(200);
+  // const { city, state } = req.body
+  (async function main() {
+    try {
+      const data = await getData('Los Angeles', 'California');
+      res.send(data).status(200);
+    } catch (error) {
+      console.log(error);
+    }
+  })()
 });
 
 app.listen(PORT, () => {
