@@ -23,7 +23,7 @@ app.post("/api/apartments/", (req, res) => {
   //     console.log(error);
   //   }
   // })()
-  res.send([{name: 'larry'}, {name: 'araceli'}]).status(200);
+  res.send(req.body).status(200);
 });
 
 app.listen(PORT, () => {
