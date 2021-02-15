@@ -5,34 +5,42 @@ class Form extends React.Component {
     super(props)
 
     this.state = {
-      value: '',
+      city: '',
+      state: '',
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
-    this.setState({ value: e.target.value })
+    this.setState({ [e.target.name]: e.target.value })
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    e.target.reset();
     this.props.getListings(this.state)
   }
 
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
+            name="city"
+            type="text"
             value={this.state.city}
             placeholder="Enter city"
             onChange={this.handleChange}
           />
           <input
-            value={this.state.ste}
+            name="state"
+            type="text"
+            value={this.state.state}
+            placeholder="Enter state"
+            onChange={this.handleChange}
           />
-          <button onClick={this.handleSubmit}>Find!</button>
+          <button type="submit">Find!</button>
         </form>
       </div>
     )

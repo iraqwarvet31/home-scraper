@@ -13,16 +13,17 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(CLIENT_DIR));
 
-app.get("/api/apartments", (req, res) => {
-
-  (async function main() {
-    try {
-      const data = await getData();
-      res.send(data).status(200);
-    } catch (error) {
-      console.log(error);
-    }
-  })()
+app.post("/api/apartments/", (req, res) => {
+  console.log(req.body)
+  // (async function main() {
+  //   try {
+  //     const data = await getData();
+  //     res.send(data).status(200);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // })()
+  res.send([{name: 'larry'}, {name: 'araceli'}]).status(200);
 });
 
 app.listen(PORT, () => {

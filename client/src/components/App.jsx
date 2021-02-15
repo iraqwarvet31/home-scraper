@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 import Form from './Form.jsx'
 
@@ -8,14 +8,17 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-
+      listings: [],
     }
     this.getListings = this.getListings.bind(this);
   }
 
-  getListings(city) {
-    // axios.post()
-    axios
+  getListings(location) {
+    console.log('ran')
+    axios.post('/api/apartments', location)
+    .then((response) => {
+      console.log(response)
+    })
   }
 
   render() {
