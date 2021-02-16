@@ -28,6 +28,8 @@
     "puppeteer": "^7.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-parallax": "^3.2.0",
+    "react-scroll-parallax": "^2.3.5",
     "sqlite3": "^4.0.6",
     "webpack-merge": "^5.7.3"
   }

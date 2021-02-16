@@ -14,10 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(CLIENT_DIR));
 
 app.post("/api/apartments/", (req, res) => {
-  // const { city, state } = req.body
+  const { city, state } = req.body;
+
   (async function main() {
     try {
-      const data = await getData('Los Angeles', 'California');
+      const data = await getData(city, state);
       res.send(data).status(200);
     } catch (error) {
       console.log(error);

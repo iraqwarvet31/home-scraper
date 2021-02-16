@@ -30,10 +30,10 @@ class Form extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        <form onSubmit={this.handleSubmit} className="col s12">
+      <div className="row form-container">
+        <form onSubmit={this.handleSubmit}>
           <div className="row">
-            <div className="input-field col s1">
+            <div className="input-field">
               <input
                 name="city"
                 type="text"
@@ -43,7 +43,7 @@ class Form extends React.Component {
               />
               <label htmlFor="city">City</label>
             </div>
-            <div className="input-field col s1">
+            <div className="input-field">
               <input
                 name="state"
                 type="text"
@@ -54,20 +54,6 @@ class Form extends React.Component {
               <label htmlFor="city">State</label>
             </div>
           </div>
-          {/* <input
-            name="city"
-            type="text"
-            value={this.state.city}
-            placeholder="Enter city"
-            onChange={this.handleChange}
-          />
-          <input
-            name="state"
-            type="text"
-            value={this.state.state}
-            placeholder="Enter state"
-            onChange={this.handleChange}
-          /> */}
           <button className="waves-effect waves-light red btn" type="submit">
             Find!
             <i className="material-icons right">cached</i>

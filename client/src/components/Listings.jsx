@@ -7,17 +7,19 @@ const Listings = ({ listings }) => {
       <td>{listing.address}</td>
       <td>{listing.price}</td>
       <td>{listing.size}</td>
+      <td><i className="material-icons">favorite_border</i></td>
     </tr>
   ));
   return (
-    <div className="table-container">
-      <table className="highlight centered responsive-table">
+    <div className="table-container responsive-table">
+      <table className="highlight centered">
         <thead>
           <tr>
             <th>Name</th>
             <th>Address</th>
             <th>Price</th>
             <th>Size</th>
+            <th>Favorite</th>
           </tr>
         </thead>
         <tbody>

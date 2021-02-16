@@ -39,7 +39,7 @@ async function getData(city, state) {
     });
     counter++;
 
-    if (counter === 3) {
+    if (counter === 2) {
       // Last page scraped terminate
       return apartmentsOnPage;
     } else {
