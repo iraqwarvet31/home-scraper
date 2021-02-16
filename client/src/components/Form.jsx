@@ -1,5 +1,4 @@
 import React from "react";
-import M from "materialize-css";
 
 class Form extends React.Component {
   constructor(props) {
@@ -11,10 +10,6 @@ class Form extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidMount() {
-    M.AutoInit();
   }
 
   handleChange(e) {

@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import M from 'materialize-css'
 
 import Form from './Form.jsx'
 import Listings from './Listings.jsx'
@@ -165,10 +164,6 @@ class App extends React.Component {
       listings: arr,
     }
     this.getListings = this.getListings.bind(this);
-  }
-
-  componentDidMount() {
-    M.AutoInit();
   }
 
   getListings(location) {
