@@ -39,7 +39,7 @@ async function getData(city, state) {
     });
     counter++;
 
-    if (counter === 2) {
+    if (counter === 15) {
       // Last page scraped terminate
       return apartmentsOnPage;
     } else {
@@ -53,7 +53,7 @@ async function getData(city, state) {
 
   const browser = await puppeteer.launch({
     args: ["--no-sandbox"],
-    headless: true,
+    headless: false,
   });
   const firstUrl =
     `https://www.apartmentfinder.com/${parseState(state)}/${parseCity(city)}-Apartments/Page1`;

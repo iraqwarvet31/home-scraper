@@ -1,4 +1,5 @@
 import React from 'react';
+import M from 'materialize-css'
 
 class Listing extends React.Component {
   constructor(props) {
@@ -10,8 +11,12 @@ class Listing extends React.Component {
     this.toggleFavorite = this.toggleFavorite.bind(this);
   }
 
+  componentDidMount() {
+    M.AutoInit();
+  }
+
   toggleFavorite(name) {
-    console.log(name)
+    M.toast('dddddddddddddddddddd', 1000, 'dialog-box')
     this.setState(state => ({
       isActive: !state.isActive,
     }))
@@ -21,7 +26,7 @@ class Listing extends React.Component {
     const {index} = this.props;
 
     return (
-      <tr key={index}>
+      <tr key={index} className="table-row">
         <td>{name}</td>
         <td>{address}</td>
         <td>{price}</td>

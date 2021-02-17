@@ -26,3 +26,17 @@ h1 {
 table.highlight>tbody>tr:hover {
   background-color: rgba(194, 22, 22, 0.144);      /* whatever color you want */
 }
+
+.progress {
+  margin: 0 auto;
+  max-width: 300px;
+  width: 30%;
+}
+
+.table-row {
+  cursor: pointer;
+}
+
+.dialog-box {
+  color: #fff;
+}
