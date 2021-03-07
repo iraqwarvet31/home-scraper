@@ -12,7 +12,7 @@ const preparePageForTests = async (page) => {
 
 async function getData(city, state) {
   var counter = 1;
-  // Extract partners on the page, recursively check the next page in the URL pattern
+  // Extract apartments on the page, recursively check the next page in the URL pattern
   const extractApartments = async (url) => {
     const page = await browser.newPage();
     await preparePageForTests(page);
@@ -39,7 +39,7 @@ async function getData(city, state) {
     });
     counter++;
 
-    if (counter === 15) {
+    if (counter === 3) {
       // Last page scraped terminate
       return apartmentsOnPage;
     } else {
