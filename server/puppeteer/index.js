@@ -22,6 +22,9 @@ async function getData(city, state) {
       let apartmentsArr = [];
       let apartments = document.querySelectorAll(".copyContainer");
       let pageNumbers = document.querySelectorAll("a[data-page]");
+      let phoneNumbers = document.querySelectorAll(".phone");
+
+      // Get apartment details
       apartments.forEach((element) => {
         let apartmentObj = {};
         let name = element.childNodes[1].innerText;
@@ -35,6 +38,12 @@ async function getData(city, state) {
         apartmentObj["size"] = size;
         apartmentsArr.push(apartmentObj);
       });
+
+      // Get apartment phone numbers
+      phoneNumbers.forEach((node, i) => {
+        apartmentsArr[i]["phone"] = node.childNodes[0].textContent;
+      })
+      console.log(apartmentsArr)
       return apartmentsArr;
     });
     counter++;
@@ -53,7 +62,7 @@ async function getData(city, state) {
 
   const browser = await puppeteer.launch({
     args: ["--no-sandbox"],
-    headless: false,
+    headless: true,
   });
   const firstUrl =
     `https://www.apartmentfinder.com/${parseState(state)}/${parseCity(city)}-Apartments/Page1`;
